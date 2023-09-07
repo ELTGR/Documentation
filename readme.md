@@ -343,6 +343,21 @@ We can found the callback named **OdomChange** witch allow us to received the in
 
 #   User guide : 
 
+##  IA trainning :
+
+### RLlib Trainning : 
+
+### Stable Baselines 3 Trainning : 
+
+<img src="https://github.com/ELTGR/Documentation/assets/122261448/3b857cfa-6fab-4c32-9982-f9d3b6fd1574.png" width="800" />
+- Line 15 you set the maximum nomber of steps to perfom
+- Line 16 you set the step interval to save a model version
+- Line 19 set the directory where the models would be save.
+- Line 20 set the directory where the logs would be save. 
+- At the line 29 you set all the parametres of the trainning. n_orders of the nombre of goals. Map_quad it's the size of the map. If map_quad=(2,2) the size of the map will be 2+2+1= 5 so 5 square per 5 square . If map_quad(4,4) the size will be 4+4+1= 9 square per 9 square. Randomized_orders set if the goals will be place randomly every episode or stay fixe. Implementation must stay on 'simple' during the trainning.
+   
+
+## Start the simulation 
 - Open a terminal, launch the ROS TCP Endpoint with :
  
                   roslaunch ros_tcp_endpoint endpoint.launch
