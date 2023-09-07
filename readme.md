@@ -355,8 +355,9 @@ We can found the callback named **OdomChange** witch allow us to received the in
 - Line 19 set the directory where the models would be save.
 - Line 20 set the directory where the logs would be save. 
 - At the line 29 you set all the parametres of the trainning. n_orders of the nombre of goals. Map_quad it's the size of the map. If map_quad=(2,2) the size of the map will be 2+2+1= 5 so 5 square per 5 square . If map_quad(4,4) the size will be 4+4+1= 9 square per 9 square. Randomized_orders set if the goals will be place randomly every episode or stay fixe. Implementation must stay on 'simple' during the trainning.
-   
-
+  
+ <img src="https://github.com/ELTGR/Documentation/assets/122261448/74adb02a-3bf5-4177-84ad-6515333bb818" width="800" />
+- You have 2 types of environnement : TSPEnv and TSPBatteryEnv. The seconde one is the same at the first one but the environment take care about the battery. If you want to modify the battery parameters its at the line 305 of the TSPBatteryEnv class and in the vehicle_implementations file at the line 46
 ## Start the simulation 
 - Open a terminal, launch the ROS TCP Endpoint with :
  
