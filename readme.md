@@ -349,14 +349,14 @@ We can found the callback named **OdomChange** witch allow us to received the in
 
 ### Stable Baselines 3 Trainning : 
 
-Line 15 you set the maximum nomber of steps to perfom
-Line 16 you set the step interval to save a model version
-Line 19 set the directory where the models would be save.
-Line 20 set the directory where the logs would be save.
+- Line 15 you set the maximum nomber of steps to perfom.
+- Line 16 you set the step interval to save a model version.
+- Line 19 set the directory where the models would be save.
+- Line 20 set the directory where the logs would be save.
   
 <img src="https://github.com/ELTGR/Documentation/assets/122261448/3b857cfa-6fab-4c32-9982-f9d3b6fd1574.png" width="800" />
 
-At the line 29 you set all the parametres of the trainning. n_orders of the nombre of goals. Map_quad it's the size of the map. If map_quad=(2,2) the size of the map will be 2+2+1= 5 so 5 square per 5 square . If map_quad(4,4) the size will be 4+4+1= 9 square per 9 square. Randomized_orders set if the goals will be place randomly every episode or stay fixe. Implementation must stay on 'simple' during the trainning.
+- Line 29 set all the parametres of the trainning. n_orders of the nombre of goals. Map_quad it's the size of the map. If map_quad=(2,2) the size of the map will be 2+2+1= 5 so 5 square per 5 square . If map_quad(4,4) the size will be 4+4+1= 9 square per 9 square. Randomized_orders set if the goals will be place randomly every episode or stay fixe. Implementation must stay on 'simple' during the trainning.
   
  <img src="https://github.com/ELTGR/Documentation/assets/122261448/74adb02a-3bf5-4177-84ad-6515333bb818" width="800" />
 
