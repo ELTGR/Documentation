@@ -222,6 +222,11 @@ the result must be : Python 3.8.10
   
         pip install "ray[rllib]" tensorflow torch
 
+  ## Install Stable Baselines3 
+- In case of probleme refer to this documentation : https://stable-baselines3.readthedocs.io/en/master/guide/install.html
+  
+        pip install stable-baselines3[extra]
+
 ## Install PyMavlink
 - In case of probleme refer to this documentation : https://ardupilot.org/dev/docs/building-setup-linux.html#building-setup-linux
 
