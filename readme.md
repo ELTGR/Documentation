@@ -411,9 +411,9 @@ Now we had implement exclusion square. There is 3 type of it : carrer, horizonta
 		    },
 		},
 	    },
-	------------------------------------------------------------------------
-	Ajouter des "vertored" qui renvoie vers un fichier sub.parm qui va contenir les param du robot
-	------------------------------------------------------------------------
+
+Ajouter des "vertored" qui renvoie vers un fichier sub.parm qui va contenir les param du robot
+
 	 "ArduSub": {
 		"default_frame": "vectored",
 		"frames": {
@@ -440,7 +440,7 @@ Now we had implement exclusion square. There is 3 type of it : carrer, horizonta
 		},
 	    },	
 	------------------------------------------------------------------------	 
- GRAND 2 : 
+ GRAND 2 : 
  
   Aller dans ardupilot/Tools/autotest/default_params pour créer les fichiers sub.parm
   Copier le fichier sub.parm original et créé s'en de nouveaux nommé sub_1.parm et sub_2.parm
@@ -448,15 +448,24 @@ Now we had implement exclusion square. There is 3 type of it : carrer, horizonta
  	De cette façon on crée deux bluerov identique avec un IA qui va permettre a Qground de comprendre qu'il y a bien 2 rov 
  
  
- GRAND 3 : 
+GRAND 3 : 
  		
   Lancer Qgroundcontrole 	
- 	Application Settings -> Comm Links : Add name= Bluerov_1 Type = UDP Port = 14550
- 					     Add name= Bluerov_2 Type = UDP Port = 14551
- GRAND 4 : 
+  
+ 	Application Settings -> Comm Links : 
+  
+  	Add name= Bluerov_1 Type = UDP Port = 14550
+ 	Add name= Bluerov_2 Type = UDP Port = 14551
+  
+GRAND 4 : 
  	
-Lancer la simulation bluerov1 : sim_vehicle.py -L RATBeach -f vectored_bluerov1 --out=udp:0.0.0.0:14550 --instance 0
-	Lancer la simulation bluerov2 : sim_vehicle.py -L RATBeach -f vectored_bluerov2 --out=udp:0.0.0.0:14551 --instance 1
+Lancer la simulation bluerov1 : 
+
+	sim_vehicle.py -L RATBeach -f vectored_bluerov1 --out=udp:0.0.0.0:14550 --instance 0
+ 
+Lancer la simulation bluerov2 : 
+
+	sim_vehicle.py -L RATBeach -f vectored_bluerov2 --out=udp:0.0.0.0:14551 --instance 1
 	
 	Application Settings -> Comm Links selectionner Bluerov_1->Connect 
 	Application Settings -> Comm Links selectionner Bluerov_2->Connect 	
