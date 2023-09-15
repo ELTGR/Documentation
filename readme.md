@@ -376,9 +376,10 @@ Now we had implement exclusion square. There is 3 type of it : carrer, horizonta
 -  The horizontal is the same thing but there is two case one above another.
 -  The carrer it's two horizontal ones next to each other
 -  Line 477 set the maximum nomber of steps to perfom.
-
+### Tensorboard : 
+  In VScode go in Help -> Show All Commandes -> shearch Python : Launch Tensor Board -> Select an other forlder and select the folder where the modeles are saved. For RLlib its in home/ray_results. For Stable baselines its in the folde where you saved the modeles
   
-## Start the simulation 
+## Start the simulation {
 
 - Open a terminal, launch the ROS TCP Endpoint with :
  
@@ -388,7 +389,7 @@ Now we had implement exclusion square. There is 3 type of it : carrer, horizonta
 
          sim_vehicle.py -L Marseille  -S 1  --out=udp:0.0.0.0:14550 --map --console
 
-" -S 1 " is the speed control if u want to increase it, go into /home/%sessions_name%/.local/bin/mavproxy.py and modify the hearthbeat value. Then launch the command with the same value write in the mavproxy.py script
+" -S " is the speed control  1 is the value.  if u want to increase it, go into /home/%sessions_name%/.local/bin/mavproxy.py and modify the hearthbeat value. Then launch the command with the same value write in the mavproxy.py script
 
 - Launch QgroundControl.
 
