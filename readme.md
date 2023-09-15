@@ -397,35 +397,37 @@ Now we had implement exclusion square. There is 3 type of it : carrer, horizonta
 - In the mission_planning directory run **bluerov_node.py**.
 
 
-  # Simulation of 2 bluerov2
+  ### Simulation of 2 bluerov2
 En cas de souci : 
 
 -	https://www.youtube.com/watch?v=UWsya46ZG4M
--	https://github.com/Intelligent-Quads/iq_tutorials/blob/master
- /docs/swarming_ardupilot.md
+-	https://github.com/Intelligent-Quads/iq_tutorials/blob/master/docs/swarming_ardupilot.md
  
--GRAND 1 :
+- GRAND 1 :
 
--Aller dans /ardupilot/Tools/autotest/pysim fichier vehicleinfo.py 
--Chercher la ligne ardusub (392 normalement) 
--Normalement, on doit avoir ça : 
+- Aller dans /ardupilot/Tools/autotest/pysim fichier vehicleinfo.py 
+- Chercher la ligne ardusub (392 normalement) 
+- Normalement, on doit avoir ça :
 
-  		    "vectored": {
-		        "waf_target": "bin/ardusub",
-		        "default_params_filename": "default_params/sub.parm",
-		    },
-		    "vectored_6dof": {
-		        "waf_target": "bin/ardusub",
-		        "default_params_filename": "default_params/sub-6dof.parm",
-		    },
-		    "gazebo-bluerov2": {
-		        "waf_target": "bin/ardusub",
-		        "default_params_filename": "default_params/sub.parm",
-		    },
-		},
-	    },
+		 "ArduSub": {
+			"default_frame": "vectored",
+			"frames": {
+			    "vectored": {
+				"waf_target": "bin/ardusub",
+				"default_params_filename": "default_params/sub.parm",
+			    },
+			    "vectored_6dof": {
+				"waf_target": "bin/ardusub",
+				"default_params_filename": "default_params/sub-6dof.parm",
+			    },
+			    "gazebo-bluerov2": {
+				"waf_target": "bin/ardusub",
+				"default_params_filename": "default_params/sub.parm",
+			    },
+			},
+		    },	
 
-- Ajouter des "vertored" qui renvoie vers un fichier sub.parm qui va contenir les param du robot
+Ajouter des "vertored" qui renvoie vers un fichier sub.parm qui va contenir les param du robot
 
 	 "ArduSub": {
 		"default_frame": "vectored",
@@ -452,8 +454,8 @@ En cas de souci :
 		    },
 		},
 	    },	
-	------------------------------------------------------------------------	 
- GRAND 2 : 
+ 
+GRAND 2 : 
  
 - Aller dans ardupilot/Tools/autotest/default_params pour créer les fichiers sub.parm.
 - Copier le fichier sub.parm original et créé s'en de nouveaux nommé sub_1.parm et sub_2.parm
@@ -462,12 +464,12 @@ En cas de souci :
 
 GRAND 3 : 
  		
-- Lancer Qgroundcontrole 	
+Lancer Qgroundcontrole 	
   
 Application Settings -> Comm Links : 
   
 	Add name= Bluerov_1 Type = UDP Port = 14550
- 	Add name= Bluerov_2 Type = UDP Port = 14551
+ 	Add name= Bluerov_2 Type = UDP Port = 14551
   
 GRAND 4 : 
  	
