@@ -395,8 +395,21 @@ Now we had implement exclusion square. There is 3 type of it : carrer, horizonta
 - Launch the Unity projet.
 
 - In the mission_planning directory run **bluerov_node.py**.
-- 
-  # Sim of 2 bluerov2
+
+
+  # Simulation of 2 bluerov2
+En cas de souci : 
+
+-	https://www.youtube.com/watch?v=UWsya46ZG4M
+-	https://github.com/Intelligent-Quads/iq_tutorials/blob/master
+ /docs/swarming_ardupilot.md
+ 
+-GRAND 1 :
+
+-Aller dans /ardupilot/Tools/autotest/pysim fichier vehicleinfo.py 
+-Chercher la ligne ardusub (392 normalement) 
+-Normalement, on doit avoir ça : 
+
   		    "vectored": {
 		        "waf_target": "bin/ardusub",
 		        "default_params_filename": "default_params/sub.parm",
@@ -412,7 +425,7 @@ Now we had implement exclusion square. There is 3 type of it : carrer, horizonta
 		},
 	    },
 
-Ajouter des "vertored" qui renvoie vers un fichier sub.parm qui va contenir les param du robot
+- Ajouter des "vertored" qui renvoie vers un fichier sub.parm qui va contenir les param du robot
 
 	 "ArduSub": {
 		"default_frame": "vectored",
@@ -442,19 +455,18 @@ Ajouter des "vertored" qui renvoie vers un fichier sub.parm qui va contenir les 
 	------------------------------------------------------------------------	 
  GRAND 2 : 
  
-  Aller dans ardupilot/Tools/autotest/default_params pour créer les fichiers sub.parm
-  Copier le fichier sub.parm original et créé s'en de nouveaux nommé sub_1.parm et sub_2.parm
-  Ajouter SYSID_THISMAV 1 dans sub_1.parm et SYSID_THISMAV 2 dans  sub_2.parm
- 	De cette façon on crée deux bluerov identique avec un IA qui va permettre a Qground de comprendre qu'il y a bien 2 rov 
- 
- 
+- Aller dans ardupilot/Tools/autotest/default_params pour créer les fichiers sub.parm.
+- Copier le fichier sub.parm original et créé s'en de nouveaux nommé sub_1.parm et sub_2.parm
+- Ajouter SYSID_THISMAV 1 dans sub_1.parm et SYSID_THISMAV 2 dans  sub_2.parm
+- De cette façon on crée deux bluerov identique avec un IA qui va permettre a Qground de comprendre qu'il y a bien 2 rov 
+
 GRAND 3 : 
  		
-  Lancer Qgroundcontrole 	
+- Lancer Qgroundcontrole 	
   
- 	Application Settings -> Comm Links : 
+Application Settings -> Comm Links : 
   
-  	Add name= Bluerov_1 Type = UDP Port = 14550
+	Add name= Bluerov_1 Type = UDP Port = 14550
  	Add name= Bluerov_2 Type = UDP Port = 14551
   
 GRAND 4 : 
@@ -466,7 +478,7 @@ Lancer la simulation bluerov1 :
 Lancer la simulation bluerov2 : 
 
 	sim_vehicle.py -L RATBeach -f vectored_bluerov2 --out=udp:0.0.0.0:14551 --instance 1
-	
+ 
 	Application Settings -> Comm Links selectionner Bluerov_1->Connect 
 	Application Settings -> Comm Links selectionner Bluerov_2->Connect 	
 
