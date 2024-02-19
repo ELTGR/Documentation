@@ -1,0 +1,68 @@
+EN CAS DE PROLBM : lancer la video qui est dans le fichier CMRE
+------------------------------------------------------------ARDUSUB------------------------------------------------------------
+Lancement 
+
+	Ouvrir le dossier ArduSub, il y a un raccourci sur le gestionnaire de fichiers ou le chemin : Desktop/ardupilot/Ardusub
+
+	Ouvrir un terminal clic droit "open à Terminal ".
+	Cliquer  4 fois sur le "+" en haut à gauche de la fenêtre du terminal.
+
+	premier terminal entrait : 
+		
+		
+		roslaunch ros_tcp_endpoint endpoint.launch
+
+
+	Deuxième terminal entrait :
+
+		sim_vehicle.py -L Marseille --out=udp:0.0.0.0:14550 --instance 1 -S 10
+
+	troisieme terminal entrer :
+
+		sim_vehicle.py -L Marseille --out=udp:0.0.0.0:14551 --instance 2 -S 10
+		
+	quatreieme terminal entrer :
+
+		sim_vehicle.py -L Marseille --out=udp:0.0.0.0:14552 --instance 3 -S 10
+		
+	cinqueme terminal entrer :
+
+		sim_vehicle.py -L Marseille --out=udp:0.0.0.0:14553 --instance 4 -S 10
+		
+
+------------------------------------------------------------DEMO------------------------------------------------------------
+
+Dans le dossier CMRE : aller dans executable unity 
+cliquer sur  exe_unity_cmre.x86_64
+
+pour bouger la camera :
+
+avancer :       	    z			haut : space  
+droite/droite :	q	  d 
+reculer :       	    s			bas : controle 
+		
+pour bouger l'orientation de la camera : clique droit de sourie et bouger cette dernière 
+
+camera 1 : monde vide  
+camera 2 : grille sur le monde entier 
+camera 3 : grille de travail	
+camera 4 : grille de travail + mine 
+camera 5 : grille de travail + mine 2
+camera 6 : mine 
+camera 7 : mine 2
+camera 8 : dessous blurov 
+
+
+------------------------------------------------------------PYTHON------------------------------------------------------------	
+Lancement 
+
+	Aller dans Desktop/CMRE/UUV_COOP/bridge, clique droite "open a Terminal " et lancer la commande suivante :
+	
+	 	python uuvs_coop.py
+	 	
+------------------------------------------------------------FIN DEMO------------------------------------------------------------
+	 	
+	 	
+Aller sur la fenetre Unity et entre : Alt + F4 
+	 	
+Ce rendre sur tous les terminaux et entre : Ctrl + C 	 	
